@@ -36,34 +36,34 @@
             this.ipTextBox = new System.Windows.Forms.TextBox();
             this.portTextBox = new System.Windows.Forms.TextBox();
             this.connLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.okButton = new System.Windows.Forms.Button();
             this.connectButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.connectionStatus = new System.Windows.Forms.Label();
             this.connectionStatusLabel = new System.Windows.Forms.Label();
             this.errorListBox = new System.Windows.Forms.ListBox();
-            this.buttonClearLogs = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.inputPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sendButton = new System.Windows.Forms.Button();
             this.messageBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chatBox = new System.Windows.Forms.ListBox();
+            this.buttonClearChat = new System.Windows.Forms.Button();
+            this.buttonClearLogs = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.rootPanel.SuspendLayout();
             this.header.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.inputPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // rootPanel
             // 
+            this.rootPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rootPanel.ColumnCount = 1;
             this.rootPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.rootPanel.Controls.Add(this.header, 0, 0);
@@ -89,58 +89,57 @@
             // 
             // headerLabel
             // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.headerLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.headerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.headerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.headerLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.headerLabel.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.headerLabel.Location = new System.Drawing.Point(0, 0);
+            this.headerLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.headerLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.headerLabel.Location = new System.Drawing.Point(49, -3);
+            this.headerLabel.MaximumSize = new System.Drawing.Size(840, 0);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.headerLabel.Size = new System.Drawing.Size(938, 54);
+            this.headerLabel.Size = new System.Drawing.Size(840, 60);
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Modbus Server";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.mainPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.mainPanel.ColumnCount = 2;
             this.mainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.mainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainPanel.Controls.Add(this.leftPanel, 0, 0);
             this.mainPanel.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.mainPanel.Location = new System.Drawing.Point(3, 63);
+            this.mainPanel.Location = new System.Drawing.Point(52, 63);
+            this.mainPanel.MaximumSize = new System.Drawing.Size(840, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.RowCount = 1;
             this.mainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainPanel.Size = new System.Drawing.Size(938, 435);
+            this.mainPanel.Size = new System.Drawing.Size(840, 435);
             this.mainPanel.TabIndex = 1;
             // 
             // leftPanel
             // 
-            this.leftPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.leftPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.leftPanel.AutoSize = true;
             this.leftPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.leftPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.leftPanel.ColumnCount = 1;
             this.leftPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.leftPanel.Controls.Add(this.tableLayoutPanel4, 0, 6);
             this.leftPanel.Controls.Add(this.ipTextBox, 0, 1);
             this.leftPanel.Controls.Add(this.portTextBox, 0, 2);
             this.leftPanel.Controls.Add(this.connLabel, 0, 0);
-            this.leftPanel.Controls.Add(this.tableLayoutPanel1, 0, 3);
-            this.leftPanel.Controls.Add(this.connectButton, 0, 4);
-            this.leftPanel.Controls.Add(this.tableLayoutPanel2, 0, 5);
-            this.leftPanel.Controls.Add(this.errorListBox, 0, 6);
-            this.leftPanel.Controls.Add(this.buttonClearLogs, 0, 7);
-            this.leftPanel.Location = new System.Drawing.Point(3, 3);
+            this.leftPanel.Controls.Add(this.connectButton, 0, 3);
+            this.leftPanel.Controls.Add(this.tableLayoutPanel2, 0, 4);
+            this.leftPanel.Controls.Add(this.errorListBox, 0, 5);
+            this.leftPanel.Location = new System.Drawing.Point(3, 95);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.leftPanel.RowCount = 8;
+            this.leftPanel.RowCount = 6;
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -148,8 +147,8 @@
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.leftPanel.Size = new System.Drawing.Size(181, 374);
+            this.leftPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.leftPanel.Size = new System.Drawing.Size(181, 337);
             this.leftPanel.TabIndex = 0;
             // 
             // ipTextBox
@@ -196,67 +195,13 @@
             this.connLabel.Text = "Connection";
             this.connLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.clearButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.okButton, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 120);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(149, 40);
-            this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clearButton.AutoSize = true;
-            this.clearButton.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.clearButton.FlatAppearance.BorderSize = 0;
-            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.clearButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearButton.Location = new System.Drawing.Point(91, 5);
-            this.clearButton.MaximumSize = new System.Drawing.Size(50, 0);
-            this.clearButton.MinimumSize = new System.Drawing.Size(40, 0);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clearButton.Size = new System.Drawing.Size(40, 29);
-            this.clearButton.TabIndex = 1;
-            this.clearButton.Text = "X";
-            this.clearButton.UseVisualStyleBackColor = true;
-            // 
-            // okButton
-            // 
-            this.okButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.okButton.AutoSize = true;
-            this.okButton.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.okButton.FlatAppearance.BorderSize = 0;
-            this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.okButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.okButton.Location = new System.Drawing.Point(17, 5);
-            this.okButton.MaximumSize = new System.Drawing.Size(50, 0);
-            this.okButton.MinimumSize = new System.Drawing.Size(40, 0);
-            this.okButton.Name = "okButton";
-            this.okButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.okButton.Size = new System.Drawing.Size(40, 29);
-            this.okButton.TabIndex = 0;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
-            // 
             // connectButton
             // 
             this.connectButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.connectButton.AutoSize = true;
             this.connectButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.connectButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.connectButton.Location = new System.Drawing.Point(51, 169);
+            this.connectButton.Location = new System.Drawing.Point(51, 120);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(79, 40);
             this.connectButton.TabIndex = 5;
@@ -270,7 +215,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel2.Controls.Add(this.connectionStatus, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.connectionStatusLabel, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 225);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 176);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 20);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -285,12 +230,12 @@
             this.connectionStatus.AutoSize = true;
             this.connectionStatus.BackColor = System.Drawing.Color.Silver;
             this.connectionStatus.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.connectionStatus.Location = new System.Drawing.Point(55, 1);
+            this.connectionStatus.Location = new System.Drawing.Point(68, 1);
             this.connectionStatus.Margin = new System.Windows.Forms.Padding(0);
             this.connectionStatus.Name = "connectionStatus";
-            this.connectionStatus.Size = new System.Drawing.Size(79, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(52, 17);
             this.connectionStatus.TabIndex = 1;
-            this.connectionStatus.Text = "disconnected";
+            this.connectionStatus.Text = "Stopped";
             this.connectionStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // connectionStatusLabel
@@ -316,32 +261,12 @@
             this.errorListBox.FormattingEnabled = true;
             this.errorListBox.HorizontalScrollbar = true;
             this.errorListBox.IntegralHeight = false;
-            this.errorListBox.Location = new System.Drawing.Point(16, 261);
+            this.errorListBox.Location = new System.Drawing.Point(16, 212);
             this.errorListBox.MaximumSize = new System.Drawing.Size(0, 180);
             this.errorListBox.MinimumSize = new System.Drawing.Size(0, 60);
             this.errorListBox.Name = "errorListBox";
             this.errorListBox.Size = new System.Drawing.Size(149, 60);
             this.errorListBox.TabIndex = 7;
-            // 
-            // buttonClearLogs
-            // 
-            this.buttonClearLogs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonClearLogs.AutoSize = true;
-            this.buttonClearLogs.BackColor = System.Drawing.Color.Transparent;
-            this.buttonClearLogs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonClearLogs.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.buttonClearLogs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonClearLogs.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClearLogs.Location = new System.Drawing.Point(60, 331);
-            this.buttonClearLogs.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonClearLogs.MaximumSize = new System.Drawing.Size(60, 32);
-            this.buttonClearLogs.MinimumSize = new System.Drawing.Size(60, 0);
-            this.buttonClearLogs.Name = "buttonClearLogs";
-            this.buttonClearLogs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonClearLogs.Size = new System.Drawing.Size(60, 26);
-            this.buttonClearLogs.TabIndex = 8;
-            this.buttonClearLogs.Text = "Clear";
-            this.buttonClearLogs.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -355,7 +280,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(745, 429);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(647, 429);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // inputPanel
@@ -371,7 +296,7 @@
             this.inputPanel.Name = "inputPanel";
             this.inputPanel.RowCount = 1;
             this.inputPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.inputPanel.Size = new System.Drawing.Size(739, 64);
+            this.inputPanel.Size = new System.Drawing.Size(641, 64);
             this.inputPanel.TabIndex = 0;
             // 
             // sendButton
@@ -379,7 +304,7 @@
             this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sendButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.sendButton.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sendButton.Location = new System.Drawing.Point(649, 7);
+            this.sendButton.Location = new System.Drawing.Point(551, 7);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(80, 50);
             this.sendButton.TabIndex = 0;
@@ -397,7 +322,7 @@
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.messageBox.Size = new System.Drawing.Size(619, 60);
+            this.messageBox.Size = new System.Drawing.Size(521, 60);
             this.messageBox.TabIndex = 1;
             // 
             // panel1
@@ -409,7 +334,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(739, 353);
+            this.panel1.Size = new System.Drawing.Size(641, 353);
             this.panel1.TabIndex = 1;
             // 
             // chatBox
@@ -423,8 +348,64 @@
             this.chatBox.Location = new System.Drawing.Point(10, 10);
             this.chatBox.Margin = new System.Windows.Forms.Padding(10);
             this.chatBox.Name = "chatBox";
-            this.chatBox.Size = new System.Drawing.Size(715, 329);
+            this.chatBox.Size = new System.Drawing.Size(617, 329);
             this.chatBox.TabIndex = 0;
+            // 
+            // buttonClearChat
+            // 
+            this.buttonClearChat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClearChat.AutoSize = true;
+            this.buttonClearChat.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClearChat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonClearChat.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonClearChat.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClearChat.Location = new System.Drawing.Point(81, 7);
+            this.buttonClearChat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClearChat.MaximumSize = new System.Drawing.Size(60, 32);
+            this.buttonClearChat.MinimumSize = new System.Drawing.Size(60, 0);
+            this.buttonClearChat.Name = "buttonClearChat";
+            this.buttonClearChat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonClearChat.Size = new System.Drawing.Size(60, 26);
+            this.buttonClearChat.TabIndex = 9;
+            this.buttonClearChat.Text = "ChatCl";
+            this.buttonClearChat.UseVisualStyleBackColor = true;
+            // 
+            // buttonClearLogs
+            // 
+            this.buttonClearLogs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClearLogs.AutoSize = true;
+            this.buttonClearLogs.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClearLogs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonClearLogs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonClearLogs.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClearLogs.Location = new System.Drawing.Point(7, 7);
+            this.buttonClearLogs.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClearLogs.MaximumSize = new System.Drawing.Size(60, 32);
+            this.buttonClearLogs.MinimumSize = new System.Drawing.Size(60, 0);
+            this.buttonClearLogs.Name = "buttonClearLogs";
+            this.buttonClearLogs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonClearLogs.Size = new System.Drawing.Size(60, 26);
+            this.buttonClearLogs.TabIndex = 8;
+            this.buttonClearLogs.Text = "LogsCl";
+            this.buttonClearLogs.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.buttonClearChat, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonClearLogs, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(16, 281);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(149, 40);
+            this.tableLayoutPanel4.TabIndex = 10;
             // 
             // Form1
             // 
@@ -439,19 +420,23 @@
             this.mainPanel.PerformLayout();
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.inputPanel.ResumeLayout(false);
             this.inputPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button buttonClearChat;
+        private System.Windows.Forms.Button buttonClearLogs;
     }
 }
 

@@ -22,20 +22,16 @@ namespace ModbusServer
         private Label connLabel;
 
         private TextBox portTextBox;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button okButton;
         private TextBox ipTextBox;
         private Button connectButton;
         private TableLayoutPanel tableLayoutPanel2;
         private Label connectionStatusLabel;
         private ListBox errorListBox;
-        private Button buttonClearLogs;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel inputPanel;
         private TextBox messageBox;
         private Panel panel1;
         private ListBox chatBox;
-        private Button clearButton;
 
         private TcpListener tcpListener;
         private IModbusSlaveNetwork slaveNetwork;
@@ -51,11 +47,11 @@ namespace ModbusServer
         private void InitHandlers()
         {
             connectButton.Click += (s, e) => ToggleServer();
-            clearButton.Click += new EventHandler((s, e) => portTextBox.Text = "");
-            okButton.Click += new EventHandler((s, e) => ToggleServer());
             messageBox.KeyDown += MessageBox_KeyDown;
             sendButton.Click += (s, e) => SendMessage();
             buttonClearLogs.Click += (s, e) => errorListBox.Items.Clear();
+            buttonClearChat.Click += (s, e) => chatBox.Items.Clear();
+
         }
 
         private void ToggleServer()
