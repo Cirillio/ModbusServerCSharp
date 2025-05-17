@@ -105,7 +105,9 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.mainPanel.ColumnCount = 2;
             this.mainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -153,14 +155,17 @@
             // ipTextBox
             // 
             this.ipTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ipTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ipTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ipTextBox.Enabled = false;
             this.ipTextBox.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ipTextBox.Location = new System.Drawing.Point(16, 48);
             this.ipTextBox.MaxLength = 16;
             this.ipTextBox.Name = "ipTextBox";
+            this.ipTextBox.ReadOnly = true;
             this.ipTextBox.Size = new System.Drawing.Size(149, 27);
             this.ipTextBox.TabIndex = 4;
-            this.ipTextBox.Text = "127.0.0.1";
+            this.ipTextBox.Text = "Any";
             this.ipTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // portTextBox
@@ -213,6 +218,7 @@
             // 
             this.clearButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clearButton.AutoSize = true;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.clearButton.FlatAppearance.BorderSize = 0;
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.clearButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -230,6 +236,7 @@
             // 
             this.okButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.okButton.AutoSize = true;
+            this.okButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.okButton.FlatAppearance.BorderSize = 0;
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.okButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -247,6 +254,7 @@
             // 
             this.connectButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.connectButton.AutoSize = true;
+            this.connectButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.connectButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.connectButton.Location = new System.Drawing.Point(51, 169);
             this.connectButton.Name = "connectButton";
@@ -321,6 +329,7 @@
             this.buttonClearLogs.AutoSize = true;
             this.buttonClearLogs.BackColor = System.Drawing.Color.Transparent;
             this.buttonClearLogs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonClearLogs.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.buttonClearLogs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonClearLogs.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClearLogs.Location = new System.Drawing.Point(60, 331);
@@ -368,6 +377,7 @@
             // sendButton
             // 
             this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sendButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.sendButton.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sendButton.Location = new System.Drawing.Point(649, 7);
             this.sendButton.Name = "sendButton";

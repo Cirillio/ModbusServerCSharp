@@ -51,7 +51,7 @@ namespace ModbusServer
         private void InitHandlers()
         {
             connectButton.Click += (s, e) => ToggleServer();
-            clearButton.Click += new EventHandler((s, e) => { ipTextBox.Text = ""; portTextBox.Text = ""; });
+            clearButton.Click += new EventHandler((s, e) => portTextBox.Text = "");
             okButton.Click += new EventHandler((s, e) => ToggleServer());
             messageBox.KeyDown += MessageBox_KeyDown;
             sendButton.Click += (s, e) => SendMessage();
@@ -76,8 +76,7 @@ namespace ModbusServer
                 try
                 {
                     int port = int.Parse(portTextBox.Text);
-                    IPAddress iPAddress = IPAddress.Parse(ipTextBox.Text);
-                    tcpListener = new TcpListener(iPAddress, port);
+                    tcpListener = new TcpListener(IPAddress.Any, port);
                     tcpListener.Start();
 
                     var factory = new ModbusFactory();
